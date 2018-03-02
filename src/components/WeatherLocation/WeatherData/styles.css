@@ -1,0 +1,25 @@
+.weatherDataCont {
+  border-top: 1px solid #DBDBDB;
+}
+
+.icon {
+  margin-left: -40%;
+  margin-top: 5%;
+}
+
+.dataTemperature {
+  font-size: 3em;
+  margin-left: 2%;
+}
+
+.extraInfoCont {
+  margin-top: -10%;
+  margin-bottom: 15%;
+}
+.dataHumidity {
+  margin-left: 55%;
+}
+
+.dataWind {
+  margin-left: 55%;
+}

@@ -1,0 +1,11 @@
+.cityCont {
+  border: 5px solid #DBDBDB;
+  border-radius: 1em;
+  width: 60%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+h1 {
+  color: #9C9C9C;
+}
