@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import WeatherTemperature from './WeatherTemperature';
 import WeatherExtraInfo from './WeatherExtraInfo';
+/*
 import {CLOUD,
         CLOUDY,
         SUN,
@@ -8,14 +10,32 @@ import {CLOUD,
         SNOW,
         WINDY
 } from './../../../constant/weathers';
+*/
 import './styles.css';
 
+const WeatherData = ({ data }) => {
+    const {temperature, weatherState, humidity, wind} = data;
+    return (
+        <div className = 'weatherDataCont'>
+            <WeatherTemperature temperature = {temperature} // cambio el parámetro a 'waater', tira una advertencia
+            weatherState = {weatherState}/>
+            <WeatherExtraInfo humidity = {humidity} wind = {wind}/>
+        </div>
+        )
+}
+// una variable dentro de mi componente
 
-const WeatherData = () => (
-   <div className = 'weatherDataCont'>
-     <WeatherTemperature temperature = {23} weatherState = {CLOUDY} />
-     <WeatherExtraInfo humidity = {80} wind = {'10 m/s'} />
-   </div>
- )
+WeatherData.propTypes = {
+    // shape valida un objeto y sus propiedades en el interior.
+    // Dentro de data, temperature se validadará para ser un number
+    data: PropTypes.shape({
+        temperature: PropTypes.number.isRequired,
+        weatherState: PropTypes.string.isRequired,
+        humidity: PropTypes.number.isRequired,
+        wind: PropTypes.string.isRequired,
+    })
+}
 
- export default WeatherData;
+export default WeatherData;
+
+
