@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
 
 const WeatherExtraInfo = ({humidity, wind}) => (
     <div>
@@ -14,5 +13,4 @@ WeatherExtraInfo.propTypes =  {
     wind: PropTypes.string.isRequired,
 }
 
-
- export default WeatherExtraInfo
+export default WeatherExtraInfo;
